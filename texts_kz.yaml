@@ -1,0 +1,47 @@
+labels:
+  tape_label: "Лента:"
+  head_label: "Бас:"
+  start_state_label: "Бастапқы күй:"
+  reset_button: "Қалпына келтіру"
+  step_button: "Қадам"
+  run_button: "Жүгіру"
+  pause_button: "Үзіліс"
+  clear_tape_button: "Лентаны тазалау"
+  speed_label: "Жылдамдық (мс):"
+  transition_table_label: "Өтпелі кесте"
+  add_rule_button: "Ереже қосу"
+  remove_rule_button: "Ережені өшіру"
+  load_button: "Жүктеу"
+  save_button: "Сақтау"
+
+messages:
+  ready: "Дайын"
+  machine_halted: "Машина тоқтады"
+  saved: "Сақталды"
+  loaded: "Жүктелді"
+
+alerts:
+  save_success: "Файл сәтті сақталды: {path}"
+  load_success: "Файл сәтті жүктелді: {path}"
+
+dialogs:
+  edit_cell_title: "Ұяшықты өңдеу"
+  edit_cell_prompt: "Жаңа мәнді енгізіңіз:"
+  edit_rule_title: "Ережені өңдеу"
+  edit_rule_prompt: "Жаңа мәнді енгізіңіз:"
+  ok_button: "ОК"
+  cancel_button: "Болдырмау"
+
+examples:
+  default_tape: "1011"
+  default_head: 0
+  default_state: "q0"
+
+transitions:
+  rules:
+    - ["q0", "0", "q0", "0", "R"]
+    - ["q0", "1", "q1", "1", "R"]
+    - ["q1", "0", "q1", "0", "R"]
+    - ["q1", "1", "q0", "1", "R"]
+
+status_template: "Күй: {state} | Бас: {head} | Қадамдар: {steps} | Тоқтаған: {halted}"
